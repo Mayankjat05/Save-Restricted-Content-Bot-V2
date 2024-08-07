@@ -26,7 +26,7 @@ async def single_link(_, message):
         if join == 1:
             return
      
-        msg = await message.reply("Processing!")
+        msg = await message.reply("Wᴀɪᴛ Processing!")
         data = await db.get_data(user_id)
         
         if data and data.get("session"):
@@ -77,7 +77,7 @@ async def batch_link(_, message):
     cl = int(l)
 
     if cl - cs > 1000:
-        await app.send_message(message.chat.id, "Only 1000 messages allowed in batch size... Make sure your start and end message have difference less than 1000")
+        await app.send_message(message.chat.id, "Only 1000 messages allowed in batch size... Make sure your start and end message have difference less than 1000 @WarriorUnitsBots")
         return
     
     try:     
@@ -98,7 +98,7 @@ async def batch_link(_, message):
             
             for i in range(int(s), int(l)):
                 if user_id in users_loop and users_loop[user_id]:
-                    msg = await app.send_message(message.chat.id, "Processing!")
+                    msg = await app.send_message(message.chat.id, "Wᴀɪᴛ Processing!")
                     try:
                         x = start_id.split('/')
                         y = x[:-1]
